@@ -45,13 +45,17 @@ class CardTest extends TestCase
   public function testCompareNoSameNameSameColor()
   {
     // TODO
-    $this->fail("not implemented !");
+      $card1 = new Card('as', 'Trèfle');
+      $card2 = new Card('2', 'Trèfle');
+      $this->assertEquals(1, CardGame::compare($card1,$card2));
   }
 
   public function testCompareNoSameNameNoSameColor()
   {
     // TODO
-    $this->fail("not implemented !");
+      $card1 = new Card('as', 'Trèfle');
+      $card2 = new Card('2', 'Pique');
+      $this->assertEquals(1, CardGame::compare($card1,$card2));
   }
 
   public function testToString()
